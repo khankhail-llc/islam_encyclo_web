@@ -1,12 +1,12 @@
-import { Colors } from "../myColors/Colors";
 
-const styles = {
+export const styles = (theme) => ({
   container: {
-    background: Colors.yellow,
+    backgroundImage: `URL(${require("../../../assets/images/designImages/bgImageDark.png")})`,
     backgroundSize: "cover",
+    backgroundPosition: "center",
     minHeight: "320px",
     display: "flex",
-    color: Colors.white,
+    color: theme.colors.TEXT,
     flexDirection: "column",
   },
   iconContainer: {
@@ -14,11 +14,8 @@ const styles = {
     justifyContent: "center",
     alignSelf: "center",
   },
-  searchicon: {
-    marginRight: "4px",
-  },
   heading: {
-    color: Colors.white,
+    color: theme.colors.HEADER_ITEMS,
     fontWeight: "bold",
     fontFamily: "Raleway",
     textAlign: "center",
@@ -31,10 +28,14 @@ const styles = {
     marginTop: 20,
     alignSelf: "center",
   },
+  navIcons: {
+    color: theme.colors.HEADER_ITEMS,
+    fontSize: "30",
+  },
+  // searchStyles
   searchbarContainer: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "center",
     backgroundColor: "#ffffff26",
     width: "100%",
     maxWidth: "300px",
@@ -42,19 +43,28 @@ const styles = {
     borderRadius: "21px",
     flexDirection: "row",
     flexWrap: "wrap",
-    padding: 15,
+    padding: "0 3px",
   },
   searchStyle: {
-    color: Colors.black,
+    color: theme.colors.HEADER_ITEMS,
     alignSelf: "center",
     justifyContent: "center",
-    backgroundColor: Colors.transparent,
+    backgroundColor: theme.colors.TRANSPARENT,
     flex: "1",
     border: "none",
     outline: "none",
     borderWidth: 0,
     borderRadius: "21px",
     fontSize: "15px",
+    padding: 15,
   },
-};
-export default styles;
+  searchIcon: {
+    marginRight: "10px",
+    fontSize: 13,
+    color: theme.colors.HEADER_ITEMS,
+  },
+  toggle: {
+    fontSize: 40,
+    marginLeft: "4px",
+  },
+});

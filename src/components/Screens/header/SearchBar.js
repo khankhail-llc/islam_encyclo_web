@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
-import styles from "./Styles";
+import {styles} from "./Styles";
+import useThemedStyles from "../../../theming/useThemedStyles";
+// import useTheme from "../../../theming/useTheme";
 
 const SearchBar = ({ onSearch }) => {
+  // const theme = useTheme();
+  const style = useThemedStyles(styles);
+
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleInputChange = (event) => {
@@ -12,15 +17,15 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div style={styles.searchbarContainer}>
+    <div style={style.searchbarContainer}>
       <input
         placeholder="Search"
-        style={styles.searchStyle}
+        style={{ ...style.searchStyle, "::placeholder": { color: "red" } }}
         value={searchQuery}
         onChange={handleInputChange}
       />
       <div>
-        <BsSearch style={styles.searchicon} size={13} color="#000" />
+        <BsSearch style={style.searchIcon} />
       </div>
     </div>
   );

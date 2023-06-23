@@ -1,28 +1,27 @@
-import { Colors } from "../myColors/Colors";
+// import { Colors } from "../myColors/Colors";
 
-export const styles = {
+export const styles = (theme) => ({
   container: {
+    display: "flex",
     width: "100%",
     position: "absolute",
-    display: "flex",
-    color: Colors.black,
+    // backgroundColor: "CYAN",
+    color: theme.colors.TEXT,
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     marginTop: "265px",
-    paddingBottom: "50px",
   },
   itemContainer: {
-    backgroundColor: Colors.white,
+    backgroundColor: theme.colors.BACKGROUND,
     width: "75%",
     display: "flex",
     flexDirection: "row",
     flex: 1,
-    border: "1px solid #f0f0f0",
-    borderTop: 'none',
+    borderBottom: `0.3px solid ${theme.colors.TEXT}`,
     cursor: "pointer",
   },
-  tittleContainer: {
+  titleContainer: {
     display: "flex",
     flex: 1,
     alignItems: "center",
@@ -35,12 +34,11 @@ export const styles = {
     lineHeight: 0.5,
   },
   englishTitle: {
-   fontSize: "12px" 
+    fontSize: "12px",
   },
   arabicTitle: {
+    display: "flex",
     marginRight: 30,
-    flex: 1,
-    lineHeight: 0.5,
     textAlign: "right",
   },
   p: {
@@ -49,6 +47,7 @@ export const styles = {
     flex: 1,
   },
   icon: {
-    color: Colors.yellow,
+    color: theme.colors.ICON,
+    fontSize: 20,
   },
-};
+});
