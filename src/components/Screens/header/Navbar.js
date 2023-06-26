@@ -3,7 +3,7 @@ import { styles } from "./Styles";
 import { AiTwotoneHome } from "react-icons/ai";
 import useTheme from "../../../theming/useTheme";
 import useThemedStyles from "../../../theming/useThemedStyles";
-import SettingButton from "../../SettingButton/SettingButton";
+import SettingButton from "../../settingButton/SettingButton";
 
 const Navbar = () => {
   const theme = useTheme();
