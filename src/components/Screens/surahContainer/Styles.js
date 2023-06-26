@@ -1,11 +1,8 @@
-// import { Colors } from "../myColors/Colors";
-
 export const styles = (theme) => ({
   container: {
     display: "flex",
     width: "100%",
     position: "absolute",
-    // backgroundColor: "CYAN",
     color: theme.colors.TEXT,
     flexDirection: "column",
     justifyContent: "center",

@@ -4,12 +4,9 @@ import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import SurahList from "../surahContainer/SurahList";
 import useThemedStyles from "../../../theming/useThemedStyles";
-// import useTheme from "../../../theming/useTheme";
 
 const Header = () => {
-  // const theme = useTheme();
   const style = useThemedStyles(styles);
-
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (query) => {

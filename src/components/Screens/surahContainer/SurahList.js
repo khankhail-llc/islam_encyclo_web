@@ -2,11 +2,9 @@ import React from "react";
 import { BsPlayCircleFill } from "react-icons/bs";
 import { surahsList } from "../../../constants/SurahData";
 import { styles } from "./Styles";
-// import useTheme from "../../../theming/useTheme";
 import useThemedStyles from "../../../theming/useThemedStyles";
 
 const SurahList = ({ searchQuery }) => {
-  //  const theme = useTheme();
    const style = useThemedStyles(styles);
 
   const filteredSurahs = surahsList.filter(
@@ -14,7 +12,6 @@ const SurahList = ({ searchQuery }) => {
       surah.title.toLowerCase().includes(searchQuery) || 
       surah.englishTitle.toLowerCase().includes(searchQuery) ||
       surah.arabicTitle.toLowerCase().includes(searchQuery)
-
   );
 
   return (

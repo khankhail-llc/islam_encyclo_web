@@ -2,3 +2,6 @@
   font-family: "Raleway", Times, serif;
 }
 
+::placeholder {
+  color:#ECF0F1;
+}
