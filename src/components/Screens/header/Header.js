@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import styles from "./Styles";
+import {styles} from "./Styles";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import SurahList from "../surahContainer/SurahList";
+import useThemedStyles from "../../../theming/useThemedStyles";
 
 const Header = () => {
+  const style = useThemedStyles(styles);
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (query) => {
@@ -12,13 +14,13 @@ const Header = () => {
   };
 
   return (
-    <div style={styles.container}>
+    <div style={style.container}>
       <Navbar />
       <header>
-        <h1 style={styles.heading}>ISLAM ENCYCLO</h1>
+        <h1 style={style.heading}>ISLAM ENCYCLO</h1>
       </header>
       <SearchBar onSearch={handleSearch} />
-      <SurahList searchQuery={searchQuery}/>
+      <SurahList searchQuery={searchQuery} />
     </div>
   );
 };
